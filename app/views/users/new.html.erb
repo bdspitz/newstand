@@ -1,0 +1,27 @@
+<div class="signup">
+  <div class="container">
+    
+    <%= form_for(@user) do |f| %>  
+    <div class="field"> 
+      <%= f.label :user, "First name" %><br> 
+      <%= f.text_field :first_name %> 
+    </div> 
+    <div class="field"> 
+      <%= f.label :user, "Last name" %><br> 
+      <%= f.text_field :first_name %> 
+    </div> 
+    <div class="field">
+      <%= f.label :user, "Email" %><br> 
+      <%= f.email_field :email %> 
+    </div>				
+    <div class="field">
+      <%= f.label :user, "Password" %><br> 
+      <%= f.password_field :password %> 
+    </div>				
+    <div class="actions"> 
+      <%= f.submit "Sign up", :class => 'btn-submit' %> 
+    </div>
+    <% end %>    
+
+  </div>
+</div>
