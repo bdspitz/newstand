@@ -181,6 +181,22 @@ form textarea {
   min-height: 400px;
 }
 
+/* Profile */
+
+.profile .container {
+  margin: 0 50px 50px;
+  padding: 0 0 50px;
+  width: 600px;
+}
+
+.profile .container .update {
+  margin-top: 60px;
+}
+
+.profile .container .update h2 {
+  margin-bottom: 8px;
+}
+
 /**********    
   MEDIA QUERIES    
 **********/
@@ -209,7 +225,7 @@ form textarea {
   }
 
   /*    ARTICLES    */
-  .article, .login .container, .signup .container, .update-article .container {
+  .article, .login .container, .signup .container, .update-article .container, .profile .container {
     margin: 0 30px 50px;
     width: 340px;
   }

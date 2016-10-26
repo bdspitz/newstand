@@ -13,4 +13,8 @@ class ApplicationController < ActionController::Base
     redirect_to '/login' unless current_user
   end
 
+  def require_logout
+    redirect_to '/articles' if current_user
+  end
+  
 end

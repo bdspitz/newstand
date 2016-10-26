@@ -1,0 +1,31 @@
+<div class="profile">
+  <div class="container">
+    
+    <% if current_user %>
+    <h1><span class="dark"><%= current_user.first_name[0] %></span><%= current_user.first_name[1,current_user.first_name.length-1] %> <%= current_user.last_name %></h1>
+    <h1><%= current_user.email %></h1>
+    <% end %>
+    
+    <div class="update">
+      <h2>Update Profile</h2>
+      <%= form_for(current_user, :url => {:action => 'update'}) do |f| %>  
+      <div class="field"> 
+        <%= f.label :user, "First name" %><br> 
+        <%= f.text_field :first_name %> 
+      </div> 
+      <div class="field"> 
+        <%= f.label :user, "Last name" %><br> 
+        <%= f.text_field :last_name %> 
+      </div> 
+      <div class="field">
+        <%= f.label :user, "Email" %><br> 
+        <%= f.email_field :email %> 
+      </div>				
+      <div class="actions"> 
+        <%= f.submit "Update", :class => 'btn-submit' %> 
+      </div>
+      <% end %>    
+    </div>
+    
+  </div>
+</div>
